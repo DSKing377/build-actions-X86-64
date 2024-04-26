@@ -5,7 +5,9 @@
 # 不要一下就拉取别人一个插件包N多插件的，多了没用，增加编译错误，自己需要的才好
 
 # git clone https://github.com/kenzok8/openwrt-packages package/kenzo
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/argonnew
+# git clone https://github.com/jerrykuku/luci-theme-argon.git package/argonnew
+# git clone https://github.com/douglarek/luci-app-homeproxy.git package/homeproxy
+# git clone https://github.com/sbwml/luci-app-mosdns.git package/mosdns
 
 # 后台IP设置
 export Ipv4_ipaddr="192.168.0.8"            # 修改openwrt后台地址(填0为关闭)
