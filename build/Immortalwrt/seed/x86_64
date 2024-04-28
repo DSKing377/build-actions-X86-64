@@ -142,7 +142,6 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-advanced-reboot=y
 CONFIG_PACKAGE_luci-app-argon-config=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
-CONFIG_PACKAGE_luci-app-cpulimit=y
 CONFIG_PACKAGE_luci-app-ddns-go=y
 CONFIG_PACKAGE_luci-app-ddnsto=y
 CONFIG_PACKAGE_luci-app-diskman=y
@@ -178,7 +177,6 @@ CONFIG_PACKAGE_luci-app-store=y
 CONFIG_PACKAGE_luci-i18n-advanced-reboot-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-cpulimit-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ddnsto-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
@@ -291,9 +289,8 @@ CONFIG_SING_BOX_WITH_QUIC=y
 CONFIG_SING_BOX_WITH_UTLS=y
 CONFIG_SING_BOX_WITH_WIREGUARD=y
 # CONFIG_TARGET_ROOTFS_EXT4FS is not set
-CONFIG_TARGET_ROOTFS_PARTSIZE=800
+CONFIG_TARGET_ROOTFS_PARTSIZE=2000
 # CONFIG_TARGET_ROOTFS_TARGZ is not set
-CONFIG_VMDK_IMAGES=y
 CONFIG_ZSTD_OPTIMIZE_O3=y
 CONFIG_boost-compile-visibility-hidden=y
 CONFIG_boost-runtime-shared=y
