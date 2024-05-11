@@ -27,7 +27,7 @@ on:
         type: choice
         options:
           - 'aarch64'
-					- 'AX1800_pro'
+	  - 'AX1800_pro'
           - 'x86_64'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
