@@ -27,7 +27,7 @@ on:
         type: choice
         options:
           - 'aarch64'
-					- 'AX1800_pro'
+	  - 'AX1800_pro'
           - 'asus_rt-acrh17'
           - 'd-team_newifi-d2'
           - 'p2w_r619ac-128m'
