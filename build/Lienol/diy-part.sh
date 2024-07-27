@@ -8,7 +8,7 @@ git clone https://github.com/kenzok8/openwrt-packages package/kenzo
 git clone https://github.com/jerrykuku/luci-theme-argon.git;main package/argonnew
 
 # 后台IP设置
-export Ipv4_ipaddr="192.168.0.8"            # 修改openwrt后台地址(填0为关闭)
+export Ipv4_ipaddr="192.168.8.8"            # 修改openwrt后台地址(填0为关闭)
 export Netmask_netm="255.255.255.0"         # IPv4 子网掩码（默认：255.255.255.0）(填0为不作修改)
 export Op_name="QingFeng-Openwrt"                # 修改主机名称为OpenWrt-123(填0为不作修改)
 
@@ -33,7 +33,7 @@ export Enable_IPV6_function="0"             # 编译IPV6固件(1为启用命令,
 export Enable_IPV4_function="0"             # 编译IPV4固件(1为启用命令,填0为不作修改)(如果跟Enable_IPV6_function一起启用命令的话,此命令会自动关闭)
 
 # 替换passwall的源码(默认luci分支)
-export PassWall_luci_branch="1"             # passwall的源码分别有【luci分支】和【luci-smartdns-new-version分支】(填0为使用luci分支,填1为使用luci-smartdns-new-version分支)
+export PassWall_luci_branch="0"             # passwall的源码分别有【luci分支】和【luci-smartdns-new-version分支】(填0为使用luci分支,填1为使用luci-smartdns-new-version分支)
 
 # 替换OpenClash的源码(默认master分支)
 export OpenClash_branch="0"                 # OpenClash的源码分别有【master分支】和【dev分支】(填0为使用master分支,填1为使用dev分支)
