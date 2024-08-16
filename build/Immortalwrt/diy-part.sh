@@ -4,7 +4,7 @@
 # 自行拉取插件之前请SSH连接进入固件配置里面确认过没有你要的插件再单独拉取你需要的插件
 # 不要一下就拉取别人一个插件包N多插件的，多了没用，增加编译错误，自己需要的才好
 
-git clone -b main https://github.com/morytyann/OpenWrt-mihomo.git package/mihomo
+# git clone -b main https://github.com/morytyann/OpenWrt-mihomo.git package/mihomo
 
 # 后台IP设置
 export Ipv4_ipaddr="192.168.8.8"            # 修改openwrt后台地址(填0为关闭)
@@ -13,7 +13,7 @@ export Op_name="OpenWrt-lyqf"                # 修改主机名称为OpenWrt-123(
 
 # 内核和系统分区大小(不是每个机型都可用)
 export Kernel_partition_size="300"            # 内核分区大小,每个机型默认值不一样 (填写您想要的数值,默认一般16,数值以MB计算，填0为不作修改),如果你不懂就填0
-export Rootfs_partition_size="5000"            # 系统分区大小,每个机型默认值不一样 (填写您想要的数值,默认一般300左右,数值以MB计算，填0为不作修改),如果你不懂就填0
+export Rootfs_partition_size="4000"            # 系统分区大小,每个机型默认值不一样 (填写您想要的数值,默认一般300左右,数值以MB计算，填0为不作修改),如果你不懂就填0
 
 # 默认主题设置
 export Mandatory_theme="argon"              # 将bootstrap替换您需要的主题为必选主题(可自行更改您要的,源码要带此主题就行,填写名称也要写对) (填写主题名称,填0为不作修改)
