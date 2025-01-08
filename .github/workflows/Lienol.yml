@@ -154,7 +154,12 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /${{ env.DIY_WORK }}
         sudo chown $USER:$GROUPS /${{ env.DIY_WORK }}
-    
+
+    - name: 设置 Go 环境
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.23'
+        
     - name: 下载"${{ matrix.target }}-${{ github.event.inputs.REPO_BRANCH }}"源码
       working-directory: /${{ env.DIY_WORK }}
       run: |
