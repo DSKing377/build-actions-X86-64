@@ -5,6 +5,7 @@
 # 不要一下就拉取别人一个插件包N多插件的，多了没用，增加编译错误，自己需要的才好
 
 # git clone -b main https://github.com/morytyann/OpenWrt-mihomo.git package/mihomo
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package/openclash
 
 # 后台IP设置
 export Ipv4_ipaddr="192.168.8.8"            # 修改openwrt后台地址(填0为关闭)
