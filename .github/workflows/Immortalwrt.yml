@@ -1,3 +1,4 @@
+
 #
 # 请大家记住拉取的是我的 281677160/build-actions 仓库，拉取的是其他仓库有问题，别问我，我也不清楚什么问题
 #
@@ -16,11 +17,7 @@ on:
       REPO_BRANCH:
         description: '天灵源码-请选择分支'
         required: true
-<<<<<<< HEAD
-        default: 'openwrt-23.05'
-=======
         default: 'openwrt-24.10'
->>>>>>> upstream/main
         type: choice
         options:
           - 'openwrt-24.10'
