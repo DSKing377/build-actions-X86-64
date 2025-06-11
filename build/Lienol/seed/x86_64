@@ -1,6 +1,7 @@
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_DEVICE_generic=y
+<<<<<<< HEAD
 CONFIG_GNUTLS_ALPN=y
 CONFIG_GNUTLS_ANON=y
 CONFIG_GNUTLS_DTLS_SRTP=y
@@ -258,3 +259,6 @@ CONFIG_boost-runtime-shared=y
 CONFIG_boost-static-and-shared-libs=y
 CONFIG_boost-variant-release=y
 CONFIG_shadow-all=y
+=======
+
+>>>>>>> upstream/main

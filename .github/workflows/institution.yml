@@ -21,6 +21,7 @@ on:
           - 'Lienol'
           - 'Official'
           - 'Xwrt'
+          - 'Mt798x'
       establish_name:
         description: '输入您需要创建的文件夹名称'
         required: true
@@ -38,22 +39,18 @@ jobs:
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
     
     steps:
-    - name: 密匙检测（密匙为空则退出）
-      run: |
-        if [[ -z "${{ secrets.REPO_TOKEN }}" ]]; then
-          echo "您没有设置仓库密匙，请按教程设置好密匙再来"
-          echo "REPO_TOKEN密匙制作教程：https://git.io/jm.md"
-          exit 1
-        fi
     - name: 准备结束
       uses: actions/checkout@v4
+      
+    - name: 密匙检测
+      uses: 281677160/common@yaoshi
       
     - name: 部署环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo -E apt-get -qq update
-        sudo -E apt-get -qq install -y git subversion git-core wget curl grep
+        sudo -E apt-get -qq update -y
+        sudo -E apt-get -qq install -y gawk git gettext libssl-dev xsltproc zip git-core wget curl grep python2.7 python3 python3-pip libpython3-dev
         sudo timedatectl set-timezone "$TZ"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
