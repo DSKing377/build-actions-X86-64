@@ -6,6 +6,7 @@
 
 # git clone -b main https://github.com/morytyann/OpenWrt-mihomo.git package/mihomo
 git clone --depth=1 https://github.com/vernesong/OpenClash.git package/openclash
+git clone main https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
 
 # 后台IP设置
 export Ipv4_ipaddr="192.168.8.8"            # 修改openwrt后台地址(填0为关闭)
