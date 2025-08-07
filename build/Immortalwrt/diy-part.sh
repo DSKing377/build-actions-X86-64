@@ -4,10 +4,10 @@
 # 自行拉取插件之前请SSH连接进入固件配置里面确认过没有你要的插件再单独拉取你需要的插件
 # 不要一下就拉取别人一个插件包N多插件的，多了没用，增加编译错误，自己需要的才好
 
-# git clone -b main https://github.com/morytyann/OpenWrt-mihomo.git package/mihomo
+git clone -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 # git clone --depth=1 https://github.com/vernesong/OpenClash.git package/openclash
 # git clone main https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # 后台IP设置
 export Ipv4_ipaddr="192.168.8.8"            # 修改openwrt后台地址(填0为关闭)
