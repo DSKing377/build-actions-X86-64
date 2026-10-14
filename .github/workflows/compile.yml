@@ -109,10 +109,12 @@ jobs:
         if [ "$compile_exit" -ne 0 ]; then
           echo "::warning::多线程编译失败，开始单线程详细日志重试"
           make -j1 V=s 2>&1 | tee compile-error.log
+          retry_exit=${PIPESTATUS[0]}     
           echo "单线程编译退出码：$retry_exit"
           exit "$retry_exit"
         fi
 
+        echo "多线程编译成功"
 
     - name: 自动打包armsr_rootfs_tar_gz
       if: steps.compile.outcome == 'success' && env.ONLINE_FIRMWARE == 'true'
