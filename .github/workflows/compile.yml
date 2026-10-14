@@ -93,13 +93,26 @@ jobs:
         cd openwrt
         make download -j8
     
+
     - name: 开始编译固件
       id: compile
       if: steps.package.outcome == 'success'
+      shell: bash
       run: |
         cd openwrt
-        echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 V=s
+        echo "CPU线程数：$(nproc)"
+
+        set +e
+        make -j"$(nproc)" 2>&1 | tee compile.log
+        compile_exit=${PIPESTATUS[0]}
+
+        if [ "$compile_exit" -ne 0 ]; then
+          echo "::warning::多线程编译失败，开始单线程详细日志重试"
+          make -j1 V=s 2>&1 | tee compile-error.log
+          echo "单线程编译退出码：$retry_exit"
+          exit "$retry_exit"
+        fi
+
 
     - name: 自动打包armsr_rootfs_tar_gz
       if: steps.compile.outcome == 'success' && env.ONLINE_FIRMWARE == 'true'
