@@ -1,0 +1,19 @@
+
+--- a/feeds/istore/luci-app-store/luasrc/controller/store.lua
++++ b/feeds/istore/luci-app-store/luasrc/controller/store.lua
+@@ -105,9 +105,15 @@ local function vue_lang()
+     local i18n = require("luci.i18n")
+     local lang = i18n.translate("istore_vue_lang")
+     if lang == "istore_vue_lang" or lang == "" then
+-        lang = "en"
++        local uci = require("luci.model.uci").cursor()
++        local system_lang = uci:get("luci", "main", "lang") or "auto"
++        if system_lang == "zh_cn" or system_lang == "zh-cn"
++            or system_lang == "zh_Hans" then
++            lang = "zh-cn"
++        else
++            lang = "en"
++        end
+     end
+     return lang
+ end
