@@ -1,7 +1,6 @@
-
 --- a/feeds/istore/luci-app-store/luasrc/controller/store.lua
 +++ b/feeds/istore/luci-app-store/luasrc/controller/store.lua
-@@ -105,9 +105,15 @@ local function vue_lang()
+@@ -105,7 +105,14 @@ local function vue_lang()
      local i18n = require("luci.i18n")
      local lang = i18n.translate("istore_vue_lang")
      if lang == "istore_vue_lang" or lang == "" then
