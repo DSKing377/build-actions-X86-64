@@ -7,7 +7,7 @@
 # git clone -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 # git clone --depth=1 https://github.com/vernesong/OpenClash.git package/openclash
 # git clone -b main --depth=1 https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # Aurora 主题
 git clone -b master --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
